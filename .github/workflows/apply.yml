@@ -15,6 +15,7 @@ jobs:
     env:
       TF_VAR_long_lived_access_token: ${{ secrets.LONG_LIVED_ACCESS_TOKEN }}
       TF_VAR_home_assistant_base_url: ${{ secrets.HOME_ASSISTANT_BASE_URL }}
+      TF_VAR_alexa_skill_id: ${{ secrets.ALEXA_SKILL_ID }}
 
     steps:
     - name: Checkout repository

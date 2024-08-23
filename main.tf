@@ -39,3 +39,11 @@ module "alexa_home_assistant" {
 data "aws_iam_policy" "basic_execution_policy" {
   name = "AWSLambdaBasicExecutionRole"
 }
+
+resource "aws_lambda_permission" "alexa" {
+  statement_id       = "AllowExecutionFromAlexa"
+  action             = "lambda:InvokeFunction"
+  function_name      = module.alexa_home_assistant.function_name
+  principal          = "alexa-appkit.amazon.com"
+  event_source_token = var.alexa_skill_id
+}

@@ -9,3 +9,9 @@ variable "long_lived_access_token" {
   type        = string
   description = "A long-lived access token to allow the Lambda function to authenticate with your Home Assistant instance."
 }
+
+variable "alexa_skill_id" {
+  sensitive   = true
+  type        = string
+  description = "The Alexa skill ID that will trigger the lambda function."
+}
