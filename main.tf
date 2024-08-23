@@ -44,6 +44,6 @@ resource "aws_lambda_permission" "alexa" {
   statement_id       = "AllowExecutionFromAlexa"
   action             = "lambda:InvokeFunction"
   function_name      = module.alexa_home_assistant.lambda_function_name
-  principal          = "alexa-appkit.amazon.com"
+  principal          = "alexa-connectedhome.amazon.com"
   event_source_token = var.alexa_skill_id
 }
