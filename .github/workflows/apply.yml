@@ -12,6 +12,9 @@ jobs:
     permissions:
       id-token: write
       contents: read
+    env:
+      TF_VAR_long_lived_access_token: ${{ secrets.LONG_LIVED_ACCESS_TOKEN }}
+      TF_VAR_home_assistant_base_url: ${{ secrets.HOME_ASSISTANT_BASE_URL }}
 
     steps:
     - name: Checkout repository
