@@ -30,9 +30,9 @@ module "alexa_home_assistant" {
   policy = data.aws_iam_policy.basic_execution_policy.arn
 
   environment_variables = {
-    BASE_URL                = var.home_assistant_base_url
+    BASE_URL                = var.HOME_ASSISTANT_BASE_URL
     DEBUG                   = "True"
-    LONG_LIVED_ACCESS_TOKEN = var.long_lived_access_token
+    LONG_LIVED_ACCESS_TOKEN = var.LONG_LIVED_ACCESS_TOKEN
   }
 }
 
